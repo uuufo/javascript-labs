@@ -16,5 +16,19 @@ lengths = [
  * paste the code you wrote previously into this file.
  */
 
-
-
+function CmToInch (c) {
+    return c / 2.54;
+}
+let inches = [];
+for (let i = 0; i < lengths.length; i++) {
+    inches.push(CmToInch(lengths[i]));
+}
+function getAverage(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total / arr.length;
+}
+console.log(getAverage(lengths));
+console.log(getAverage(inches));

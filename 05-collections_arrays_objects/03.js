@@ -29,7 +29,7 @@ stores =  [
     [ '1003FL', 'Appliance Direct', 'FL', 'East', 'Orlando' ],
     [ '1003GA', 'Appliance Direct', 'GA', 'East', 'Albany' ],
     [ '1004MD', 'Target', 'MD', 'East', 'Bethesda' ],
-    [ '1004MI', 'Target', 'MI', 'North', 'Detriot' ],
+    [ '1004MI', 'Target', 'MI', 'North', 'Detroit' ],
     [ '1004NY', 'Target', 'NY', 'East', 'Albany' ],
     [ '1004OH', 'Target', 'OH', 'North', 'Columbus' ],
     [ '2010AZ', 'K-Mart', 'AZ', 'South', 'Flagstaff' ],
@@ -70,3 +70,21 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+
+stores.forEach(store => {
+    console.log(store[4]);
+});
+
+stores.forEach(store => {
+    if (store[2] === "CA") {
+        console.log(store);
+    }
+});
+
+let total = 0;
+stores.forEach(store => {
+    if (store[1] === "Target") {
+        total++;
+    }
+});
+console.log("Total Target stores: " + total);

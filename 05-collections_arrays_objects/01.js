@@ -1,3 +1,7 @@
+function getRandomNumber(){
+    return Math.floor((Math.random() * 100) + 1);
+}
+
 /**
  * 1. Create an array of strings with the names of some items in the room you
  *    are sitting in right now. For example "chair", "keyboard" etc
@@ -17,3 +21,44 @@
  *    function that takes an array as an argument and returns the sum. Use this
  *    function to log the sum of the two arrays of odd and even numbers.
  */
+
+let things = ["desk", "chair", "rug", "lamp"];
+let cabinet = [["tape", "stapler", "sticky notes"],
+    ["batteries", "labels", "paper"],
+    ["paperclips", "markers", "pencils"]];
+
+console.log(cabinet[0][0]);
+console.log(cabinet[0][2]);
+console.log(cabinet[1][0]);
+console.log(cabinet[2][1]);
+console.log(cabinet[2][0]);
+
+let nums = [];
+for (let i = 1; i <= 100; i++) {
+    nums.push(i);
+}
+for (let i = 0; i < nums.length; i++) {
+    console.log(nums[i]);
+}
+nums = [];
+for (let i = 1; i <= 100; i++) {
+    nums.push(getRandomNumber());
+}
+let evens = [];
+let odds = [];
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+        evens.push(nums[i]);
+    } else {
+        odds.push(nums[i]);
+    }
+}
+function getArrayTotal (arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+console.log(getArrayTotal(evens));
+console.log(getArrayTotal(odds));
